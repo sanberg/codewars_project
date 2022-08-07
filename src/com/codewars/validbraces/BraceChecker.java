@@ -13,11 +13,7 @@ public class BraceChecker {
                 if (index < 0 || isEven(index - i)) {
                     StringBuilder lastHalfReversed = new StringBuilder(str.substring(str.length() / 2)).reverse();
                     System.out.println(lastHalfReversed);
-                    if (lastHalfReversed.indexOf("]") == index && index != -1) {
-                        return true;
-                    } else {
-                        return false;
-                    }
+                    return lastHalfReversed.indexOf("]") == index && index != -1;
                 }
             }
             if (c == '(') {
@@ -25,11 +21,7 @@ public class BraceChecker {
                 if (index < 0 || !isEven(index - i)) {
                     StringBuilder lastHalfReversed = new StringBuilder(str.substring(str.length() / 2)).reverse();
                     System.out.println(lastHalfReversed);
-                    if (lastHalfReversed.indexOf(")") == index && index != -1) {
-                        return true;
-                    } else {
-                        return false;
-                    }
+                    return lastHalfReversed.indexOf(")") == index && index != -1;
                 }
             }
             if (c == '{') {
@@ -37,11 +29,7 @@ public class BraceChecker {
                 if (index < 0 || isEven(index - i)) {
                     StringBuilder lastHalfReversed = new StringBuilder(str.substring(str.length() / 2)).reverse();
                     System.out.println(lastHalfReversed);
-                    if (lastHalfReversed.indexOf("}") == index && index != -1) {
-                        return true;
-                    } else {
-                        return false;
-                    }
+                    return lastHalfReversed.indexOf("}") == index && index != -1;
                 }
             }
         }
